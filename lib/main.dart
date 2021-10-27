@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Job Finder App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFF43B1B7),
+        primaryColor: const Color(0xFF43B1B7),
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFED408)),
       ),
