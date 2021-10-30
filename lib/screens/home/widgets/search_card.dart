@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_finder_flutter/constants/colors.dart';
+import 'package:job_finder_flutter/screens/search/search.dart';
 
 class SearchCard extends StatelessWidget {
   const SearchCard({Key? key}) : super(key: key);
@@ -71,6 +72,11 @@ class SearchCard extends StatelessWidget {
                 letterSpacing: 1.0,
               ),
             ),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => SearchPage(),
+              ));
+            },
           ),
         ],
       ),
