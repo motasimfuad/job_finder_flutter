@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder_flutter/screens/search/search_app_bar.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -9,7 +10,6 @@ class SearchPage extends StatelessWidget {
         body: Stack(
       children: [
         Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: Container(),
@@ -21,6 +21,12 @@ class SearchPage extends StatelessWidget {
               ),
               flex: 1,
             ),
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            SearchAppBar(),
           ],
         )
       ],
