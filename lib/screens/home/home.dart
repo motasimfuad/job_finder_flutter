@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Row(
@@ -26,13 +27,15 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            children: [
-              const HomeAppBar(),
-              const SearchCard(),
-              const TagList(),
-              JobList(),
-            ],
+          Expanded(
+            child: Column(
+              children: [
+                const HomeAppBar(),
+                const SearchCard(),
+                const TagList(),
+                JobList(),
+              ],
+            ),
           ),
         ],
       ),

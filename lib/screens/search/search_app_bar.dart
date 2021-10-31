@@ -15,26 +15,51 @@ class SearchAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 35,
-            width: 35,
-            decoration: const BoxDecoration(
-              color: kPrimary,
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.arrow_left,
-              color: Colors.white,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Container(
+              height: 35,
+              width: 35,
+              decoration: const BoxDecoration(
+                color: kPrimary,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+              ),
             ),
           ),
           Row(
-            children: const [
-              Icon(
-                Icons.timer_outlined,
-                size: 30,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 30, right: 10),
+                transform: Matrix4.rotationZ(100),
+                child: Stack(
+                  children: [
+                    const Icon(
+                      Icons.notifications_none_outlined,
+                      size: 30,
+                      color: Colors.grey,
+                    ),
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: const BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(width: 20),
-              Icon(
+              const SizedBox(width: 20),
+              const Icon(
                 Icons.more_horiz_outlined,
                 size: 30,
               )
